@@ -6,12 +6,12 @@ config.read(".\\configurations\\config.ini")
 
 
 class ReadConfig():
-
+    # Login & Signup details below
     # Getting the Application URL from config.ini file
     @staticmethod
     def getApplicationURL():
-        url = config.get('Common Details', 'baseURL')
-        return url
+        baseUrl = config.get('Common Details', 'baseUrl')
+        return baseUrl
 
     # Getting the username from config.ini file
     @staticmethod
