@@ -10,7 +10,7 @@ class ReadConfig():
     # Getting the Application URL from config.ini file
     @staticmethod
     def getApplicationURL():
-        baseUrl = config.get('Common Details', 'baseUrl')
+        baseUrl = config.get('Common Details', 'baseURL')
         return baseUrl
 
     # Getting the username from config.ini file

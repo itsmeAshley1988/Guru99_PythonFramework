@@ -5,7 +5,7 @@ from Utilities.readProperties import ReadConfig
 # from Utilities.customLogger import LogGen
 import allure
 
-# @allure.severity(allure.severity_level.NORMAL)
+@allure.severity(allure.severity_level.NORMAL)
 class Test_001_Login:
     baseUrl = ReadConfig.getApplicationURL()
     username_login = ReadConfig.getUsernameLogin()
@@ -32,4 +32,4 @@ class Test_001_Login:
         self.lp.Click_Submit_Button()
         login_confirmation = self.driver.find_element_by_xpath(self.Login_successful_Message).text
         if login_confirmation == "Login Successfully":
-            allure.attach(self.driver.get_screenshot_as_png(), name="login", attachment_type=AttachmentType.PNG)
+           allure.attach(self.driver.get_screenshot_as_png(), name="login", attachment_type=AttachmentType.PNG)
