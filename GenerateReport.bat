@@ -1,0 +1,1 @@
+allure serve C:\Users\ashley\PycharmProjects\Guru99_PythonFramework\Reports

@@ -1,9 +1,7 @@
-import selenium
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC,wait
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.common.exceptions import WebDriverException
+
 
 
 
@@ -11,14 +9,11 @@ class LoginPage:
     ##### All Locators for Login ########
 
     link_SignOn_xpath = "//a[@href='login.php'][contains(.,'SIGN-ON')]"
-
     input_Username_xpath = "//input[@name='userName']"
-
     input_Password_xpath = "//input[@name='password']"
-
     submit_Button_xpath = "//input[@name='submit']"
-
-    login_successful_Message = "//h3[contains(.,'Login Successfully')]"
+    label_successfulLogin_xpath = "//h3[contains(.,'Login Successfully')]"
+    label_UnsuccessfulLogin_xpath = "//span[contains(.,'Enter your userName and password correct')]"
 
     def __init__(self, driver):
         self.driver = driver
@@ -43,9 +38,6 @@ class LoginPage:
         element = wait.until(EC.element_to_be_clickable((By.XPATH, self.submit_Button_xpath)))
         element.click()
 
-    # def Login_Verification(self, login_successfully):
-        # element = wait.until(EC.element_to_be_clickable((By.XPATH, self.Login_successful_Message)))
-       # element.click()
 
 
 
